@@ -245,6 +245,7 @@ python main.py
 |---------|-------------|
 | `python main.py` | Launch training with live visualisation |
 | `python play.py` | Watch the champion play at human speed |
+| `python arena.py` | **1v1 — Player vs AI** battle |
 | `python plot.py` | Generate training charts from history |
 
 ### Controls — Training (`main.py`)
@@ -282,6 +283,7 @@ NeuroTris/
 ├── main.py              Training loop with live visualisation
 │
 ├── play.py              Champion replay at human-readable speed
+├── arena.py              1v1 — Player vs AI battle
 │
 ├── tracker.py           Logs training metrics to history.md + history.json
 │
