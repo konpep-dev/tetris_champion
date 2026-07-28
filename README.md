@@ -225,8 +225,8 @@ After approximately 200 generations (~1 hour), the agent consistently scores **2
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/konpep-dev/NeuroTris.git
-cd NeuroTris
+git clone https://github.com/konpep-dev/tetris_champion.git
+cd tetris_champion
 
 # 2. Install dependencies
 pip install numpy pygame matplotlib
