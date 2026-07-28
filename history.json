@@ -1,0 +1,46 @@
+[
+  {
+    "gen": 34,
+    "best_score": 3600,
+    "avg_score": 1277.5,
+    "best_steps": 130,
+    "avg_steps": 65.0,
+    "best_lines": 36,
+    "avg_lines": 12.35,
+    "best_fit": 396130.0,
+    "avg_fit": 140165.0
+  },
+  {
+    "gen": 35,
+    "best_score": 3900,
+    "avg_score": 1555.0,
+    "best_steps": 131,
+    "avg_steps": 70.675,
+    "best_lines": 38,
+    "avg_lines": 15.15,
+    "best_fit": 428131.0,
+    "avg_fit": 170720.675
+  },
+  {
+    "gen": 36,
+    "best_score": 7100,
+    "avg_score": 1820.0,
+    "best_steps": 205,
+    "avg_steps": 77.925,
+    "best_lines": 67,
+    "avg_lines": 17.65,
+    "best_fit": 777205.0,
+    "avg_fit": 199727.925
+  },
+  {
+    "gen": 37,
+    "best_score": 4800,
+    "avg_score": 1875.0,
+    "best_steps": 156,
+    "avg_steps": 80.7,
+    "best_lines": 47,
+    "avg_lines": 18.375,
+    "best_fit": 527156.0,
+    "avg_fit": 205955.7
+  }
+]
