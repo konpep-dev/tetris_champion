@@ -24,6 +24,11 @@ font = pygame.font.SysFont('consolas', 14)
 font_big = pygame.font.SysFont('consolas', 18)
 clock = pygame.time.Clock()
 
+import os
+if not os.path.exists("tetris_champion.npz"):
+    print("No trained champion found. Run 'python main.py' first to train a model.")
+    print("(or place a trained tetris_champion.npz in this directory)")
+    sys.exit(1)
 net, gen, _ = NeuralNet.load("tetris_champion.npz")
 
 player = TetrisGame()
@@ -116,6 +121,10 @@ def draw_board(game, x, y, label, colour):
 
 running = True
 pause = False
+player_gravity_interval = 500
+player_gravity_timer = pygame.time.get_ticks()
+ai_move_interval = 200
+ai_move_timer = pygame.time.get_ticks()
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -138,8 +147,13 @@ while running:
                     player.hard_drop()
 
     if not pause:
-        if not ai.game_over:
+        now = pygame.time.get_ticks()
+        if not player.game_over and now - player_gravity_timer >= player_gravity_interval:
+            player.move_down()
+            player_gravity_timer = now
+        if not ai.game_over and now - ai_move_timer >= ai_move_interval:
             ai_step()
+            ai_move_timer = now
 
     px = MARGIN
     py = MARGIN + 30
